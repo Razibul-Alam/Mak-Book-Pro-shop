@@ -26,14 +26,14 @@
                   </div>
                   <div class="storage">
                     <p>Storage</p>
-                    <button>256GB Unified memory</button>
-                    <button>512GB Unified memory</button>
-                    <button>1TB Unified memory</button>
+                    <button onclick="storagePrice('low')">256GB Unified memory</button>
+                    <button onclick="storagePrice('medium')">512GB Unified memory</button>
+                    <button onclick="storagePrice('high')">1TB Unified memory</button>
                 </div>
                 <div class="delivery">
                     <p>Storage</p>
-                    <button>256GB Unified memory</button>
-                    <button>512GB Unified memory</button>
+                    <button onclick="handleDeliveryCost(false)">256GB Unified memory</button>
+                    <button onclick="handleDeliveryCost(true)">512GB Unified memory</button>
                 </div>
                 <div class="price-table mt-4">
                     <table class="table">
@@ -55,17 +55,17 @@
                           <tr>
                             
                             <td colspan="2">Extra storage cost</td>
-                            <td>$ <span>0</span></td>
+                            <td>$ <span id="storage-cost">0</span></td>
                           </tr>
                           <tr>
                             
                             <td colspan="2">Delivery charge</td>
-                            <td>$ <span>0</span></td>
+                            <td>$ <span id="delivery-cost">0</span></td>
                           </tr>
                           <tr>
                             
                             <td colspan="2">Total price</td>
-                            <td>$ <span>1299</span></td>
+                            <td>$ <span id="total-balance">1299</span></td>
                           </tr>
                         </tbody>
                       </table>

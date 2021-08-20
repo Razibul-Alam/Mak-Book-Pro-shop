@@ -8,17 +8,43 @@ function handleMemoryPrice(isIncrease) {
     }else{
         memoryCost.innerText=0
     }
-    
+    handleTotalBalance() 
 }
-function handleMemoryPrice(isIncrease) {
-    let memoryText=document.getElementById('memory-cost')
+// storage cost handle
+function storagePrice(method) {
+    let storageCost=document.getElementById('storage-cost')
+    
+    
+    if (method=='high') {
+        storageCost.innerText=180
+    }else if (method=='medium') {
+        storageCost.innerText=100
+      }
+    else{
+        storageCost.innerText=0
+    }
+    handleTotalBalance()
+}
+// delivery cost handle
+function handleDeliveryCost(isIncrease) {
+    let deliveryCost=document.getElementById('delivery-cost')
     
     
     if (isIncrease) {
-        memoryText.innerText=80
+        deliveryCost.innerText=20
     }else{
-        memoryText.innerText=0
+        deliveryCost.innerText=0
     }
-    
+
+    handleTotalBalance()
+}
+// handle total cost
+function handleTotalBalance() {
+    let memoryCost=document.getElementById('memory-cost').innerText
+    let storageCost=document.getElementById('storage-cost').innerText
+    let deliveryCost=document.getElementById('delivery-cost').innerText
+    let totalCost=document.getElementById('total-balance')
+totalCost.innerText=1299+parseInt(memoryCost)+parseInt(storageCost)+parseInt(deliveryCost)
+
 }
 
