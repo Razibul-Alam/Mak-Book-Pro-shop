@@ -1,5 +1,5 @@
 // storage cost handle
-function extraPrice(type,prevCost,updateValue) {
+function handleExtraCharge(type,prevCost,updateValue) {
     let extraCost=document.getElementById(prevCost)
     // handle storage cost
     if (type=='storage') {

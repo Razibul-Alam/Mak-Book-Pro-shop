@@ -27,19 +27,19 @@
           8Gb unified memory 256Gb SSD storage Tow thunderbolt / USB 4 ports Magic Mouse Magic Keyboard -US English</p>
         <div class="memory mt-4">
           <p class="fw-bold">Memory</p>
-          <button onclick="extraPrice('memory','memory-cost',)">8GB Unified memory</button>
-          <button onclick="extraPrice('memory','memory-cost','high')">16GB Unified memory</button>
+          <button onclick="handleExtraCharge('memory','memory-cost',)">8GB Unified memory</button>
+          <button onclick="handleExtraCharge('memory','memory-cost','high')">16GB Unified memory</button>
         </div>
         <div class="storage mt-4">
           <p class="fw-bold">Storage</p>
-          <button onclick="extraPrice('storage','storage-cost')">256GB SSD Storage</button>
-          <button onclick="extraPrice('storage','storage-cost','low')">512GB SSD Storage</button>
-          <button onclick="extraPrice('storage','storage-cost','high')">1TB SSD Storage</button>
+          <button onclick="handleExtraCharge('storage','storage-cost')">256GB SSD Storage</button>
+          <button onclick="handleExtraCharge('storage','storage-cost','low')">512GB SSD Storage</button>
+          <button onclick="handleExtraCharge('storage','storage-cost','high')">1TB SSD Storage</button>
         </div>
         <div class="delivery mt-4">
           <p class="fw-bold">Chose your delivery option</p>
-          <button onclick="extraPrice('delivery','delivery-cost')">Friday,Aug 25 Free prime delivery</button>
-          <button onclick="extraPrice('delivery','delivery-cost','high')">Friday,Aug 21 delivery Charge $20</button>
+          <button onclick="handleExtraCharge('delivery','delivery-cost')">Friday,Aug 25 Free prime delivery</button>
+          <button onclick="handleExtraCharge('delivery','delivery-cost','high')">Friday,Aug 21 delivery Charge $20</button>
         </div>
         <!-- cost calculation section -->
         <div class="price-table mt-4">
