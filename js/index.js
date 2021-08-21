@@ -1,43 +1,35 @@
-
-function handleMemoryPrice(isIncrease) {
-    let memoryCost=document.getElementById('memory-cost')
-    
-    
-    if (isIncrease) {
-        memoryCost.innerText=180
-    }else{
-        memoryCost.innerText=0
-    }
-    handleTotalBalance() 
-}
 // storage cost handle
-function storagePrice(method) {
-    let storageCost=document.getElementById('storage-cost')
-    
-    
-    if (method=='high') {
-        storageCost.innerText=180
-    }else if (method=='medium') {
-        storageCost.innerText=100
+function extraPrice(type,prevCost,updateValue) {
+    let extraCost=document.getElementById(prevCost)
+    // handle storage cost
+    if (type=='storage') {
+        if (updateValue=='high') {
+            extraCost.innerText=180
+        }else if (updateValue=='low') {
+            extraCost.innerText=100
+          }else{
+            extraCost.innerText=0  
+          }
+    }
+// handle memory cost
+    else if (type=='memory') {
+        if (updateValue=='high') {
+            extraCost.innerText=180
+        }else{
+            extraCost.innerText=0
+        }
       }
+    //   handle delivery cost
     else{
-        storageCost.innerText=0
+        if (updateValue=='high') {
+            extraCost.innerText=20
+        }else{
+            extraCost.innerText=0
+        }
     }
     handleTotalBalance()
 }
-// delivery cost handle
-function handleDeliveryCost(isIncrease) {
-    let deliveryCost=document.getElementById('delivery-cost')
-    
-    
-    if (isIncrease) {
-        deliveryCost.innerText=20
-    }else{
-        deliveryCost.innerText=0
-    }
 
-    handleTotalBalance()
-}
 // handle total cost
 function handleTotalBalance() {
     let memoryCost=document.getElementById('memory-cost').innerText
@@ -61,7 +53,3 @@ function discountHandle() {
     }
     
 }
-
-
-//  try new micro function
-

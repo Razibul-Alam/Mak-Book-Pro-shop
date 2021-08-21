@@ -21,19 +21,19 @@
                   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et necessitatibus dolore modi nesciunt dicta incidunt rem quaerat. Earum, impedit dolor!</p>
                   <div class="memory mt-4">
                       <p>Memory</p>
-                      <button onclick="handleMemoryPrice(false)">8GB Unified memory</button>
-                      <button onclick="handleMemoryPrice(true)">16GB Unified memory</button>
+                      <button onclick="extraPrice('memory','memory-cost',)">8GB Unified memory</button>
+                      <button onclick="extraPrice('memory','memory-cost','high')">16GB Unified memory</button>
                   </div>
                   <div class="storage mt-4">
                     <p>Storage</p>
-                    <button onclick="storagePrice('low')">256GB SSD Storage</button>
-                    <button onclick="storagePrice('medium')">512GB SSD Storage</button>
-                    <button onclick="storagePrice('high')">1TB SSD Storage</button>
+                    <button onclick="extraPrice('storage','storage-cost')">256GB SSD Storage</button>
+                    <button onclick="extraPrice('storage','storage-cost','low')">512GB SSD Storage</button>
+                    <button onclick="extraPrice('storage','storage-cost','high')">1TB SSD Storage</button>
                 </div>
                 <div class="delivery mt-4">
                     <p>Storage</p>
-                    <button onclick="handleDeliveryCost(false)">Friday,Aug 25 Free prime delivery</button>
-                    <button onclick="handleDeliveryCost(true)">Friday,Aug 21 delivery Charge $20</button>
+                    <button onclick="extraPrice('delivery','delivery-cost')">Friday,Aug 25 Free prime delivery</button>
+                    <button onclick="extraPrice('delivery','delivery-cost','high')">Friday,Aug 21 delivery Charge $20</button>
                 </div>
                 <div class="price-table mt-4">
                     <table class="table">
