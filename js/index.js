@@ -4,7 +4,7 @@ function handleMemoryPrice(isIncrease) {
     
     
     if (isIncrease) {
-        memoryCost.innerText=80
+        memoryCost.innerText=180
     }else{
         memoryCost.innerText=0
     }
@@ -52,8 +52,8 @@ let netBalance=document.getElementById('net-balance').innerText=grandTotal
 //  promo code discount handle
 function discountHandle() {
     let netBalance=document.getElementById('net-balance')
-    const total=parseInt(netBalance.innerText)
     let promoValue=document.getElementById('promo-value')
+    const total=parseInt(netBalance.innerText)
     const promoCode=promoValue.value
     if (promoCode=='stevekaku') {
         netBalance.innerText=total-(total*0.2)
@@ -61,4 +61,7 @@ function discountHandle() {
     }
     
 }
+
+
+//  try new micro function
 

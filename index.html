@@ -12,28 +12,28 @@
   </head>
   <body>
       <section class="container">
-          <main class="row" >
+          <main class="row mt-5" >
               <div class="col-lg-4">
                   <img src="./images/mac.png" class="img-fluid" alt="">
               </div>
               <div class="col-lg-6 ms-4">
                   <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
                   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et necessitatibus dolore modi nesciunt dicta incidunt rem quaerat. Earum, impedit dolor!</p>
-                  <div class="memory">
+                  <div class="memory mt-4">
                       <p>Memory</p>
                       <button onclick="handleMemoryPrice(false)">8GB Unified memory</button>
                       <button onclick="handleMemoryPrice(true)">16GB Unified memory</button>
                   </div>
-                  <div class="storage">
+                  <div class="storage mt-4">
                     <p>Storage</p>
-                    <button onclick="storagePrice('low')">256GB Unified memory</button>
-                    <button onclick="storagePrice('medium')">512GB Unified memory</button>
-                    <button onclick="storagePrice('high')">1TB Unified memory</button>
+                    <button onclick="storagePrice('low')">256GB SSD Storage</button>
+                    <button onclick="storagePrice('medium')">512GB SSD Storage</button>
+                    <button onclick="storagePrice('high')">1TB SSD Storage</button>
                 </div>
-                <div class="delivery">
+                <div class="delivery mt-4">
                     <p>Storage</p>
-                    <button onclick="handleDeliveryCost(false)">256GB Unified memory</button>
-                    <button onclick="handleDeliveryCost(true)">512GB Unified memory</button>
+                    <button onclick="handleDeliveryCost(false)">Friday,Aug 25 Free prime delivery</button>
+                    <button onclick="handleDeliveryCost(true)">Friday,Aug 21 delivery Charge $20</button>
                 </div>
                 <div class="price-table mt-4">
                     <table class="table">
@@ -70,7 +70,7 @@
                         </tbody>
                       </table>
                 </div>
-                <div class="promo-code">
+                <div class="promo-code mt-4">
                     <p>Add promo code</p>
                     <input type="text" name="" id="promo-value">
                     <button onclick="discountHandle()" class="btn btn-danger">Apply</button>
