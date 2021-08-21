@@ -1,95 +1,92 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Mak-Book-Pro</title>
-  </head>
-  <body>
-      <section class="container">
-          <main class="row mt-5" >
-              <div class="col-lg-4">
-                  <img src="./images/mac.png" class="img-fluid" alt="">
-              </div>
-              <div class="col-lg-6 ms-4">
-                  <h2>Customise your Blue 24-inch iMak with Apple M1 chip.</h2>
-                  <p>Apple M1 chip with 8-core 4 performance cores and 4 efficiency cores, 7-core GPU, and 16-core neural engine 8Gb unified memory 256Gb SSD storage Tow thunderbolt / USB 4 ports Magic Mouse Magic Keyboard -US English</p>
-                  <div class="memory mt-4">
-                      <p>Memory</p>
-                      <button onclick="extraPrice('memory','memory-cost',)">8GB Unified memory</button>
-                      <button onclick="extraPrice('memory','memory-cost','high')">16GB Unified memory</button>
-                  </div>
-                  <div class="storage mt-4">
-                    <p>Storage</p>
-                    <button onclick="extraPrice('storage','storage-cost')">256GB SSD Storage</button>
-                    <button onclick="extraPrice('storage','storage-cost','low')">512GB SSD Storage</button>
-                    <button onclick="extraPrice('storage','storage-cost','high')">1TB SSD Storage</button>
-                </div>
-                <div class="delivery mt-4">
-                    <p>Chose your delivery option</p>
-                    <button onclick="extraPrice('delivery','delivery-cost')">Friday,Aug 25 Free prime delivery</button>
-                    <button onclick="extraPrice('delivery','delivery-cost','high')">Friday,Aug 21 delivery Charge $20</button>
-                </div>
-                <div class="price-table mt-4">
-                    <table class="table">
-                        
-                        <tbody>
-                          <tr>
-                            
-                            <td colspan="2">best-price</td>
-                            <td>$ <span>1299</span></td>
-                            
-                           
-                          </tr>
-                          
-                          <tr>
-                            
-                            <td colspan="2">Extra memory cost</td>
-                            <td>$ <span id="memory-cost">0</span></td>
-                          </tr>
-                          <tr>
-                            
-                            <td colspan="2">Extra storage cost</td>
-                            <td>$ <span id="storage-cost">0</span></td>
-                          </tr>
-                          <tr>
-                            
-                            <td colspan="2">Delivery charge</td>
-                            <td>$ <span id="delivery-cost">0</span></td>
-                          </tr>
-                          <tr>
-                            
-                            <td colspan="2">Total price</td>
-                            <td>$ <span id="total-balance">1299</span></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                </div>
-                <div class="promo-code mt-4">
-                    <p>Add promo code</p>
-                    <input type="text" name="" id="promo-value">
-                    <button onclick="discountHandle()" class="btn btn-danger">Apply</button>
-                </div>
-              </div>
-              <h3>Total cost $ <span id="net-balance">1299</span></h3>
-          </main>
-          
-      </section>
-    
-<script src="./js/index.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <title>Mak-Book-Pro</title>
+</head>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-  </body>
+<body>
+  <section class="container">
+    <main class="row mt-5">
+      <!-- image column start -->
+      <div class="col-lg-5">
+        <img src="./images/mac.png" class="img-fluid" alt="">
+      </div>
+      <!-- text && calculation section -->
+      <div class="col-lg-6 ms-4">
+        <h2>Customise your Blue 24-inch iMak with Apple M1 chip.</h2>
+        <p>Apple M1 chip with 8-core 4 performance cores and 4 efficiency cores, 7-core GPU, and 16-core neural engine
+          8Gb unified memory 256Gb SSD storage Tow thunderbolt / USB 4 ports Magic Mouse Magic Keyboard -US English</p>
+        <div class="memory mt-4">
+          <p class="fw-bold">Memory</p>
+          <button onclick="extraPrice('memory','memory-cost',)">8GB Unified memory</button>
+          <button onclick="extraPrice('memory','memory-cost','high')">16GB Unified memory</button>
+        </div>
+        <div class="storage mt-4">
+          <p class="fw-bold">Storage</p>
+          <button onclick="extraPrice('storage','storage-cost')">256GB SSD Storage</button>
+          <button onclick="extraPrice('storage','storage-cost','low')">512GB SSD Storage</button>
+          <button onclick="extraPrice('storage','storage-cost','high')">1TB SSD Storage</button>
+        </div>
+        <div class="delivery mt-4">
+          <p class="fw-bold">Chose your delivery option</p>
+          <button onclick="extraPrice('delivery','delivery-cost')">Friday,Aug 25 Free prime delivery</button>
+          <button onclick="extraPrice('delivery','delivery-cost','high')">Friday,Aug 21 delivery Charge $20</button>
+        </div>
+        <!-- cost calculation section -->
+        <div class="price-table mt-4">
+          <table class="table">
+            <tbody class="fw-bold">
+              
+              <td colspan="2">best-price</td>
+                <td>$ <span>1299</span></td>
+              </tr>
+              <tr>
+                <td colspan="2">Extra memory cost</td>
+                <td>$ <span id="memory-cost">0</span></td>
+              </tr>
+              <tr>
+                <td colspan="2">Extra storage cost</td>
+                <td>$ <span id="storage-cost">0</span></td>
+              </tr>
+              <tr>
+                <td colspan="2">Delivery charge</td>
+                <td>$ <span id="delivery-cost">0</span></td>
+              </tr>
+              <tr>
+                <td colspan="2" >Total price</td>
+                <td>$ <span id="total-balance">1299</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- promo code discount section -->
+        <div class="promo-code mt-4">
+          <p>Add promo code</p>
+          <input type="text" name="" id="promo-value">
+          <button onclick="discountHandle()" class="btn btn-danger">Apply</button>
+        </div>
+      </div>
+      <hr class=" bg-dark mt-4">
+      <h2 class="text-center mt-2">Total cost $ <span id="net-balance">1299</span></h2>
+    </main>
+
+  </section>
+
+  <script src="./js/index.js"></script>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+</body>
+
 </html>
