@@ -27,29 +27,32 @@ function extraPrice(type,prevCost,updateValue) {
             extraCost.innerText=0
         }
     }
-    handleTotalBalance()
+    handleTotalBalance(prevCost)
 }
 
 // handle total cost
 function handleTotalBalance() {
-    let memoryCost=document.getElementById('memory-cost').innerText
-    let storageCost=document.getElementById('storage-cost').innerText
-    let deliveryCost=document.getElementById('delivery-cost').innerText
+    let memoryText=document.getElementById('memory-cost').innerText
+    let storageText=document.getElementById('storage-cost').innerText
+    let deliveryText=document.getElementById('delivery-cost').innerText
     let totalCost=document.getElementById('total-balance')
-    const grandTotal=1299+parseInt(memoryCost)+parseInt(storageCost)+parseInt(deliveryCost)
-totalCost.innerText=grandTotal
-
-let netBalance=document.getElementById('net-balance').innerText=grandTotal
+    const memoryCost=parseInt(memoryText)
+    const storageCost=parseInt(storageText)
+    const deliveryCost=parseInt(deliveryText)
+    const grandTotal=1299+memoryCost+storageCost+deliveryCost
+     totalCost.innerText=grandTotal
+     document.getElementById('net-balance').innerText=grandTotal
 }
 //  promo code discount handle
 function discountHandle() {
     let netBalance=document.getElementById('net-balance')
-    let promoValue=document.getElementById('promo-value')
-    const total=parseInt(netBalance.innerText)
-    const promoCode=promoValue.value
+    let promoText=document.getElementById('promo-value')
+    const total=parseFloat(netBalance.innerText)
+    console.log(total)
+    const promoCode=promoText.value
     if (promoCode=='stevekaku') {
         netBalance.innerText=total-(total*0.2)
-        promoValue.value=''
+        promoText.value=''
     }
     
 }
