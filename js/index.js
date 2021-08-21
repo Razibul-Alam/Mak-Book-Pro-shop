@@ -1,6 +1,7 @@
 // storage cost handle
 function handleExtraCharge(type,prevCost,updateValue) {
     let extraCost=document.getElementById(prevCost)
+    
     // handle storage cost
     if (type=='storage') {
         if (updateValue=='high') {
@@ -43,15 +44,16 @@ function handleTotalBalance() {
      totalCost.innerText=grandTotal
      document.getElementById('net-balance').innerText=grandTotal
 }
+
 //  promo code discount handle
 function discountHandle() {
-    let netBalance=document.getElementById('net-balance')
+    let discountBalance=document.getElementById('net-balance')
+    let totalCost=document.getElementById('total-balance')
     let promoText=document.getElementById('promo-value')
-    const total=parseFloat(netBalance.innerText)
-    console.log(total)
+     const totalBalance=parseFloat(totalCost.innerText)
     const promoCode=promoText.value
     if (promoCode=='stevekaku') {
-        netBalance.innerText=total-(total*0.2)
+        discountBalance.innerText=totalBalance-(totalBalance*0.2)
         promoText.value=''
     }
     
